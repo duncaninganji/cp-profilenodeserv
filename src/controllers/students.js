@@ -19,7 +19,7 @@ export async function createStudent(req, res) {
     .set(studentObj)
     .then(() => {  
       console.log(`Student with id ${studentId} created`)
-      return res.status(200).send(`New Student with id ${studentId} added`)
+      return res.status(200).send(`New student with id ${studentId} added`)
     })
     .catch(error => {
       console.error(error)
