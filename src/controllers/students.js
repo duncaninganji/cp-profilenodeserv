@@ -13,7 +13,7 @@ export async function createStudent(req, res) {
   const studentObj = req.body
   const studentId = studentObj.email 
   
-  firestore
+  await firestore
     .collection(studentsCollectionId)
     .doc(studentId)
     .set(studentObj)
